@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="dashboard">
+        <div class="logo">eCommerce Store</div>
+        <nav>
+            <a href="#" onclick="showSection('home')" class="active">Home</a>
+            <a href="#" onclick="showSection('cart')">Cart</a>
+            <a href="#" onclick="showSection('orders')">Orders</a>
+            <a href="#" onclick="showSection('account')">Account</a>
+        </nav>
+    </div>
+    <div id="main-content">
+        <h1>Shopping Cart</h1>
+        <div id="product-list" class="section">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Product 1 description</p>
+                <p>$100</p>
+                <button onclick="addToCart('Product 1', 100)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Product 2 description</p>
+                <p>$150</p>
+                <button onclick="addToCart('Product 2', 150)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Product 3 description</p>
+                <p>$200</p>
+                <button onclick="addToCart('Product 3', 200)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>Product 4 description</p>
+                <p>$120</p>
+                <button onclick="addToCart('Product 4', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 5">
+                <h3>Product 5</h3>
+                <p>Product 5 description</p>
+                <p>$80</p>
+                <button onclick="addToCart('Product 5', 80)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 6">
+                <h3>Product 6</h3>
+                <p>Product 6 description</p>
+                <p>$60</p>
+                <button onclick="addToCart('Product 6', 60)">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div id="cart" class="section" style="display:none;">
+            <h1>Your Cart</h1>
+            <div id="cart-items"></div>
+            <button id="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+
+        <!-- Orders Section -->
+        <div id="orders" class="section" style="display:none;">
+            <h1>Your Orders</h1>
+            <p>No orders yet.</p>
+        </div>
+
+       <!-- Account Section -->
+<div id="account" class="section" style="display:none;">
+    <h1>Your Account</h1>
+    
+    <!-- User Info -->
+    <div id="account-info">
+        <img src="profile-pic-placeholder.png" alt="Profile Picture" id="profile-pic" />
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <button id="edit-profile-btn">Edit Profile</button>
+        <button id="logout-btn">Logout</button>
+    </div>
+    
+    <!-- Address Section -->
+    <div id="address-info">
+        <h2>Address</h2>
+        <p><strong>Shipping Address:</strong></p>
+        <p>1234 Elm Street, Springfield, IL, 62704</p>
+        <button id="edit-address-btn">Edit Address</button>
+    </div>
+    
+    <!-- Payment Methods -->
+    <div id="payment-info">
+        <h2>Payment Methods</h2>
+        <p><strong>Credit Card:</strong> **** **** **** 1234</p>
+        <button id="edit-payment-btn">Edit Payment</button>
+    </div>
+    
+    <!-- Order History -->
+    <div id="order-history">
+        <h2>Order History</h2>
+        <div id="orders" class="orders-list">
+            <p>No orders found.</p>
+            <!-- Example order, uncomment when you have real orders -->
+            <!-- <div class="order-item">Order #1 - $100 - 01/01/2024</div> -->
+        </div>
+    </div>
+</div>
+
+    <script src="app.js".js"></script>
+</body>
+</html>
